@@ -1,8 +1,78 @@
-<HTML>
-<TITLE>
-Test
-</TITLE>
-<BODY>
-Hello world
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UK House Price Index Map</title>
+    <!--Leaflet stylesheet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <!--My web-app stylesheet-->
+    <link href="css/style_blank.css" type="text/css" rel=stylesheet>
+    <!--No UI Slider stylesheet-->
+    <link href="css/nouislider.css" type="text/css" rel=stylesheet>
+</head>
+
+<body>
+        <div class="top-bar">
+            <div class="header">UK House Price Index Map by Student No: 201587134</div>
+            <div class="button-bar">
+                <div id="buttons">
+                    <button id="toggleJan" class = "dataButton">Jan 2022</button>
+                    <button id="toggleFeb" class = "dataButton">Feb 2022</button>
+                    <button id="toggleMar" class = "dataButton">Mar 2022</button>
+                    <button id="toggleApr" class = "dataButton">Apr 2022</button>
+                    <button id="toggleMay" class = "dataButton">May 2022</button>
+                    <button id="toggleJun" class = "dataButton">Jun 2022</button>
+                    <button id="toggleJul" class = "dataButton">Jul 2022</button>
+                    <button id="toggleAug" class = "dataButton">Aug 2022</button>
+                    <button id="toggleSep" class = "dataButton">Sep 2022</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="map">
+            <button id="menu" class="menu">Info</button>
+            <div id="dataLabel" class="dataLabel"></div>
+            <div id="slide-in">
+                <div class="slide-in-section">
+                    <p><h3>Information:</h3>This web-map was designed to visualise UK House Price Index (UK HPI) data, which captures changes in the value of residential properties by geographic unit. It is intended to help prospective buyers and sellers visualise the trajectory of property values in their geographic area of interest.</p>
+                    <p>Average house prices can be seen to increase with increasing proximity to central London, and also increase over time from January to September 2022.</p>
+                    <h3>Instructions:</h3>
+                    <p>Use the buttons at the top-center to load average property price data for your month of interest.</p>
+                    <p>Hover over a region to show detailed HPI data in the bottom-right corner of the map window. Click on a region to focus-zoom on it.</p>
+                    <p>Use the below slider to set minimum and maximum filters, useful for filtering out regions which have an average price that exceeds a buyer's budget.</p>
+                    <div id="slider"></div>
+                </div>
+
+                <div class="slide-in-section">
+                    <p>Click below to watch an animation of the price change from Jan-Sep 2022</p>
+                    <button id="animate" class = "animate">Animate</button>
+                </div>
+                <div class="slide-in-section">
+                    <div id="radios" >
+                        <input type="radio" name="dataType" id="averagePrice" checked />
+                        <label for="averagePrice">Average Overall Price</label>
+                    </div>
+                </div>
+                <div class="slide-in-footer">
+                    <p>UK HPI data is freely available under the Open Government Licence 3.0. <a href="https://landregistry.data.gov.uk/app/ukhpi" target="_blank">Source</a></p>
+                    <p>Boundary-Line data is freely available from OS Open Data <a href="https://www.ordnancesurvey.co.uk/business-government/products/boundaryline" target="_blank">Source</a></p>
+                    
+                </div>
+            </div>
+        </div>
+
+    <script src="js/leaflet.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script src="data/HPI_2022_JAN.js"></script>
+    <script src="data/HPI_2022_FEB.js"></script>
+    <script src="data/HPI_2022_MAR.js"></script>
+    <script src="data/HPI_2022_APR.js"></script>
+    <script src="data/HPI_2022_MAY.js"></script>
+    <script src="data/HPI_2022_JUN.js"></script>
+    <script src="data/HPI_2022_JUL.js"></script>
+    <script src="data/HPI_2022_AUG.js"></script>
+    <script src="data/HPI_2022_SEP.js"></script>
+    <script src="js/script_blank.js"></script>
+
+</body>
+</html>
